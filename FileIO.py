@@ -38,14 +38,18 @@ def readTos():
 
     fromLines = tosFile.readlines()
     for x in fromLines:
-        tos.append(int(x.rstrip("\n")))
+        tos.append(x.rstrip("\n"))
 
     return boards, tos
 
 def readBoards():
     return pickle.load(open("boards.txt", 'rb'))
 
+def readBoard(file_name):
+    print()
 
+def writeSuggestion(sug):
+    print()
 
 
 data1 = numpy.zeros((2, 3, 4), dtype=int)
@@ -60,6 +64,8 @@ print(data3)
 writeMoves(data1, data2, data3)
 
 back1, back2 = readFroms()
+back1, back3 = readTos()
 
 print(back1)
 print(back2)
+print(back3)
